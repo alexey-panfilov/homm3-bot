@@ -72,7 +72,14 @@ For resource number extraction:
 
 Templates are small images of UI elements the bot uses for detection.
 
-**Option A: Manual Creation (Best Results)**
+**RECOMMENDED: Use the 3-step automated workflow**
+
+See [TEMPLATE_WORKFLOW.md](../TEMPLATE_WORKFLOW.md) for the simple approach:
+1. `python 1_capture_gameplay.py` - Auto-capture screenshots every 10 seconds
+2. `python 2_extract_objects.py` - Extract UI elements from captures
+3. `python 3_label_objects.py` - Interactive labeling with quick options
+
+**Option A: Manual Creation**
 
 1. **Take screenshots** while playing HoMM3:
    ```
