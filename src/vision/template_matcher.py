@@ -153,7 +153,7 @@ class TemplateMatcher:
         """
         directory = Path(directory)
         if not directory.exists():
-            logger.warning("Template directory not found", path=str(directory))
+            logger.debug("Template directory not found (will be created when templates added)", path=str(directory))
             return 0
 
         count = 0
@@ -205,7 +205,7 @@ class TemplateMatcher:
             image_gray = image
 
         if template_name not in self.template_cache:
-            logger.warning("Template not loaded", name=template_name)
+            logger.debug("Template not loaded (expected if not yet created)", name=template_name)
             return []
 
         threshold = threshold or self.threshold

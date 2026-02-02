@@ -33,6 +33,10 @@ class OCREngine:
             tesseract_cmd: Path to tesseract executable (auto-detect if None)
             lang: Language for OCR (default: 'eng')
         """
+        # Auto-detect Tesseract if not specified
+        if not tesseract_cmd:
+            tesseract_cmd = self._find_tesseract()
+
         if tesseract_cmd:
             pytesseract.pytesseract.tesseract_cmd = tesseract_cmd
 
@@ -44,6 +48,33 @@ class OCREngine:
             logger.info("OCR engine initialized", version=str(version), lang=lang)
         except Exception as e:
             logger.warning("Tesseract OCR not available", error=str(e))
+
+    @staticmethod
+    def _find_tesseract() -> Optional[str]:
+        """
+        Auto-detect Tesseract installation on Windows.
+
+        Returns:
+            Path to tesseract.exe or None if not found
+        """
+        import platform
+        import os
+
+        # Common Windows installation paths
+        if platform.system() == 'Windows':
+            possible_paths = [
+                r'C:\Program Files\Tesseract-OCR\tesseract.exe',
+                r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe',
+                r'C:\Tesseract-OCR\tesseract.exe',
+            ]
+
+            for path in possible_paths:
+                if os.path.exists(path):
+                    logger.info("Auto-detected Tesseract", path=path)
+                    return path
+
+        # On Linux/Mac, assume it's in PATH
+        return None
 
     def extract_text(
         self,
