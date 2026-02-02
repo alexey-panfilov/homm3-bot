@@ -1,0 +1,40 @@
+# Core dependencies
+numpy>=1.24.0
+pillow>=10.0.0
+
+# Screen capture
+mss>=9.0.0
+pywin32>=306  # Windows-specific window management
+
+# Computer vision
+opencv-python>=4.8.0
+pytesseract>=0.3.10
+
+# Mouse and keyboard control
+pyautogui>=0.9.54
+pynput>=1.7.6
+
+# Machine learning
+torch>=2.0.0
+torchvision>=0.15.0
+
+# GUI
+PyQt6>=6.5.0
+pyqtgraph>=0.13.0
+
+# Utilities
+pyyaml>=6.0
+structlog>=23.1.0
+colorama>=0.4.6
+psutil>=5.9.0
+
+# Development
+pytest>=7.4.0
+pytest-cov>=4.1.0
+black>=23.7.0
+flake8>=6.1.0
+mypy>=1.5.0
+
+# Optional but recommended
+# Tesseract OCR must be installed separately on Windows
+# Download from: https://github.com/UB-Mannheim/tesseract/wiki

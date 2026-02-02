@@ -1,0 +1,42 @@
+# HoMM3 Bot Default Configuration
+
+# Screen capture settings
+capture:
+  fps: 2.0                    # Frames per second for screen capture
+  buffer_size: 10             # Number of recent frames to keep in buffer
+
+# Mouse control settings
+mouse:
+  default_duration: 0.2       # Default duration for mouse movements (seconds)
+  click_delay: 0.1            # Delay after mouse clicks (seconds)
+  enable_verification: true   # Verify mouse actions
+
+# Keyboard control settings
+keyboard:
+  default_delay: 0.1          # Default delay after key presses (seconds)
+
+# Window management settings
+window:
+  window_title: null          # Specific window title (null for auto-detect)
+  process_name: HOMM3 2.0.exe # Game process name (heroes3.exe for GOG, HOMM3 2.0.exe for Steam HD)
+  auto_focus: true            # Automatically focus game window
+
+# AI decision-making settings
+ai:
+  strategy_profile: balanced  # Strategy profile: balanced, aggressive, defensive, economic
+  decision_timeout: 5.0       # Maximum time for decision-making (seconds)
+  enable_ml: false            # Enable machine learning models
+  model_path: null            # Path to trained ML model (null for rule-based)
+
+# Turn detection settings
+turn:
+  auto_detect: true           # Automatically detect when it's the bot's turn
+  manual_hotkey: F1           # Hotkey to manually trigger bot action
+  detection_interval: 0.5     # How often to check for turn (seconds)
+
+# Logging settings
+logging:
+  level: INFO                 # Log level: DEBUG, INFO, WARNING, ERROR, CRITICAL
+  log_dir: data/logs          # Directory for log files
+  enable_file_logging: true   # Save logs to file
+  enable_structured: true     # Enable structured logging

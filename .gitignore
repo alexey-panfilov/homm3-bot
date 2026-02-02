@@ -1,0 +1,124 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+ENV/
+env/
+.venv
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# PyCharm
+.idea/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# MyPy
+.mypy_cache/
+.dmypy.json
+dmypy.json
+
+# Project-specific
+# Game data and assets (large files)
+data/assets/
+data/templates/
+*.lod
+*.def
+*.pak
+
+# Logs and temporary files
+data/logs/*.log
+data/logs/*.png
+data/logs/*.jpg
+!data/logs/.gitkeep
+
+# Screenshots (can be large)
+*.png
+*.jpg
+*.jpeg
+*.bmp
+!docs/images/*.png
+!docs/images/*.jpg
+
+# Game installation files
+*.exe
+*.dll
+
+# Models and weights (can be huge)
+*.pt
+*.pth
+*.onnx
+*.h5
+*.pb
+models/weights/
+checkpoints/
+
+# Database
+*.db
+*.sqlite
+*.sqlite3
+
+# Config files with secrets
+config/local.yaml
+config/production.yaml
+.env
+.env.local
+
+# OS
+Thumbs.db
+Desktop.ini
+
+# Tesseract training data (large)
+tessdata/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Video recordings
+*.mp4
+*.avi
+*.mov
+
+# Compressed files
+*.zip
+*.tar.gz
+*.rar
